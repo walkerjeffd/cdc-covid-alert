@@ -3,7 +3,7 @@ const nodemailer = require('nodemailer')
 require('dotenv').config()
 
 const LEVELS = ['LOW', 'MEDIUM', 'HIGH']
-const FIPS = '23005'
+const FIPS = process.env.FIPS
 const URL = 'https://www.cdc.gov/coronavirus/2019-ncov/json/cdt-ccl-data.json?cachebust=1838309'
 
 async function sendMail (mailOptions) {
